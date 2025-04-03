@@ -16,7 +16,7 @@ def gen_inference_wide(
         data=data, gen_loss=F.l1_loss, nf_factor=nf_factor, arch=arch
     )
     learn.path = root_folder
-    learn.load(weights_name)
+    learn.load(weights_name, weights_only=False)
     learn.model.eval()
     return learn
 
